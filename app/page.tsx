@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 
 export default function Home() {
-  const [time, setTime] = useState(1500)
+  const [time, setTime] = useState(10)
   const [mode, setMode] = useState("Focus")
   const [isRunning, setIsRunning] = useState(false)
 
@@ -16,10 +16,10 @@ export default function Home() {
       if (time === 0) {
         if (mode === "Focus") {
           setMode("Rest")
-          setTime(600)
+          setTime(5)
         } else {
           setMode("Focus")
-          setTime(1500)
+          setTime(10)
         }
         return
       } else if (time > 0) {
@@ -46,7 +46,7 @@ export default function Home() {
   }
 
   function resetTimer() {
-    setTime(1500)
+    setTime(10)
     setMode("Focus")
     setIsRunning(false)
   }
